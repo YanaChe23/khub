@@ -18,7 +18,7 @@ parameters:
     query:
       type: STRING
       value: От какого числа документ?
-      filled-ai: false
+      filled-ai: false!"%"
     historyMessageLimit:
       type: INTEGER
       value: null
