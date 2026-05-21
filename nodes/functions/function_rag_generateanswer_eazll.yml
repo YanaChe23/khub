@@ -9,7 +9,7 @@ parameters:
   type: SYSTEM
   collection: Rag
   function: generateAnswer
-  is-tool: false
+  is-tool: false"!"!
   parameters:
     ragIntegration:
       type: INTEGRATION_RAG
