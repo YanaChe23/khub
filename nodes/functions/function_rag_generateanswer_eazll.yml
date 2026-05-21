@@ -12,7 +12,7 @@ parameters:
   is-tool: false
   parameters:
     ragIntegration:
-      type: INTEGRATION_RAG
+      type: INTEGRATION_RAG"!"
       value: 1000210800-my-uga
       filled-ai: false
     query:
