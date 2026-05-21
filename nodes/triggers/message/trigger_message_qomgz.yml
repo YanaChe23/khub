@@ -4,6 +4,6 @@ name: Сообщение
 position:
   x: 416
   y: 153
-next-step: function_reactions_sendtext_nymbq
+next-step: function_rag_generateanswer_eazll
 parameters:
   placeholder: null

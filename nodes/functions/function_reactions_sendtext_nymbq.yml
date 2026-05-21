@@ -2,8 +2,8 @@
 id: function_reactions_sendtext_nymbq
 name: Reactions.sendText
 position:
-  x: 849
-  y: 113
+  x: 1067
+  y: 178
 next-step: null
 parameters:
   type: SYSTEM
