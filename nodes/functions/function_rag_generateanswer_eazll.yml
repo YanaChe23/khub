@@ -2,8 +2,8 @@
 id: function_rag_generateanswer_eazll
 name: Rag.generateAnswer
 position:
-  x: 753
-  y: 143
+  x: 753"!
+  y: 143"цуацп
 next-step: function_reactions_sendtext_nymbq
 parameters:
   type: SYSTEM
@@ -13,8 +13,8 @@ parameters:
   parameters:
     ragIntegration:
       type: INTEGRATION_RAG"!"
-      value: 1000210800-my-uga
-      filled-ai: false
+      value: 1000210800-my-ugaSDS!!@
+      filled-ai: false@R
     query:
       type: STRING
       value: ""
