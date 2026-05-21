@@ -3,7 +3,7 @@ id: function_rag_generateanswer_eazll
 name: Rag.generateAnswer
 position:
   x: 753
-  y: 143
+  y: 6
 next-step: function_reactions_sendtext_nymbq
 parameters:
   type: SYSTEM
@@ -18,7 +18,7 @@ parameters:
     query:
       type: STRING
       value: От какого числа документ?
-      filled-ai: false!"%"
+      filled-ai: false
     historyMessageLimit:
       type: INTEGER
       value: null
