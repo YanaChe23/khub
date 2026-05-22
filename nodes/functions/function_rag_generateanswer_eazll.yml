@@ -13,7 +13,7 @@ parameters:
   parameters:
     ragIntegration:
       type: INTEGRATION_RAG
-      value: 1000210800-sdq-rny
+      value: 1000210800-sdq-znf
       filled-ai: false
     query:
       type: STRING
