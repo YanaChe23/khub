@@ -2,8 +2,8 @@
 id: function_rag_generateanswer_eazll
 name: Rag.generateAnswer
 position:
-  x: 910
-  y: 200
+  x: 752
+  y: 179
 next-step: function_reactions_sendtext_nymbq
 parameters:
   type: SYSTEM
@@ -13,7 +13,7 @@ parameters:
   parameters:
     ragIntegration:
       type: INTEGRATION_RAG
-      value: null
+      value: 1000210800-sdq-rny
       filled-ai: false
     query:
       type: STRING
