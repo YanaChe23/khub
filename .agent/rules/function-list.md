@@ -5,40 +5,22 @@ For detailed info about parameters and response, read the corresponding file.
 
 ## System Functions
 
-- `AgentContext.addNote` — Adds a text fragment to the context. Empty strings are ignored.
-  Schema: .agent/system-functions/AgentContext/addNote.json
-- `AgentContext.getNotes` — Returns concatenated text (by time of addition)
-  Schema: .agent/system-functions/AgentContext/getNotes.json
-- `AgentContext.deleteNotes` — Deletes all stored text notes
-  Schema: .agent/system-functions/AgentContext/deleteNotes.json
-- `AgentContext.putValue` — Stores a key-value pair in the context. Used to store objects different from text.
-  Schema: .agent/system-functions/AgentContext/putValue.json
-- `AgentContext.getValue` — Retrieves a previously stored value
-  Schema: .agent/system-functions/AgentContext/getValue.json
-- `AgentContext.deleteValue` — Deletes a previously stored value
-  Schema: .agent/system-functions/AgentContext/deleteValue.json
-- `AgentContext.clearContext` — Clears the entire context (both text and KV)
-  Schema: .agent/system-functions/AgentContext/clearContext.json
-- `Asr.recognize` — Recognizes audio content using the specified ASR integration
-  Schema: .agent/system-functions/Asr/recognize.json
 - `Context.getAccountId` — Gets the account ID from the current request's bot ID
   Schema: .agent/system-functions/Context/getAccountId.json
 - `Context.getProjectShortName` — Gets the project short name from the current request's bot ID
   Schema: .agent/system-functions/Context/getProjectShortName.json
-- `Context.getBotId` — Gets the bot ID from the current request
-  Schema: .agent/system-functions/Context/getBotId.json
 - `Context.getChannelType` — Gets the channel type from the current request
   Schema: .agent/system-functions/Context/getChannelType.json
-- `Context.isAsyncChannel` — Checks if the current channel is asynchronous
-  Schema: .agent/system-functions/Context/isAsyncChannel.json
+- `Context.getBotId` — Gets the bot ID from the current request
+  Schema: .agent/system-functions/Context/getBotId.json
 - `Context.isTestChannel` — Checks if the current channel is a test channel
   Schema: .agent/system-functions/Context/isTestChannel.json
+- `Context.isAsyncChannel` — Checks if the current channel is asynchronous
+  Schema: .agent/system-functions/Context/isAsyncChannel.json
 - `Context.getRequestId` — Gets the question ID from the current request
   Schema: .agent/system-functions/Context/getRequestId.json
 - `Context.getMessageContent` — Gets the content of the message from the current request
   Schema: .agent/system-functions/Context/getMessageContent.json
-- `Context.getEmailContent` — Gets email content from the current request
-  Schema: .agent/system-functions/Context/getEmailContent.json
 - `Context.getChatId` — Gets the chat ID from the current request
   Schema: .agent/system-functions/Context/getChatId.json
 - `Context.getSessionId` — Gets the session ID from the current request
@@ -51,6 +33,8 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/Context/getLastFunctionResult.json
 - `Context.getChatHistory` — Retrieves the chat history for the current account
   Schema: .agent/system-functions/Context/getChatHistory.json
+- `Context.getEmailContent` — Gets email content from the current request
+  Schema: .agent/system-functions/Context/getEmailContent.json
 - `Credentials.get` — Retrieves credential information by its key
   Schema: .agent/system-functions/Credentials/get.json
 - `Db.get` — Finds a single document by documentKey in the specified database collection
@@ -61,10 +45,10 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/Db/countByFilters.json
 - `Db.put` — Saves a document by documentKey (upsert operation)
   Schema: .agent/system-functions/Db/put.json
-- `Db.delete` — Deletes a document by documentKey
-  Schema: .agent/system-functions/Db/delete.json
 - `Db.deleteByFilters` — Deletes multiple documents by filter
   Schema: .agent/system-functions/Db/deleteByFilters.json
+- `Db.delete` — Deletes a document by documentKey
+  Schema: .agent/system-functions/Db/delete.json
 - `Db.updateByFilters` — Updates documents matching the filter
   Schema: .agent/system-functions/Db/updateByFilters.json
 - `Email.send` — Sends an email using the specified SMTP integration
@@ -89,14 +73,6 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/Llm/getChatHistory.json
 - `Llm.summarizeText` — Summarizes long text to a specified size while preserving key information.
   Schema: .agent/system-functions/Llm/summarizeText.json
-- `ProjectRouter.callProject` — Calls external project by chat api token and optional custom data
-  Schema: .agent/system-functions/ProjectRouter/callProject.json
-- `ProjectRouter.switchTo` — Switches the conversation context to another project.
-  Schema: .agent/system-functions/ProjectRouter/switchTo.json
-- `ProjectRouter.backToOriginalProject` — Returns the conversation context back to the original project
-  Schema: .agent/system-functions/ProjectRouter/backToOriginalProject.json
-- `ProjectRouter.getCustomData` — Gets the custom data that was passed during the last context switch to this bot
-  Schema: .agent/system-functions/ProjectRouter/getCustomData.json
 - `Rag.retrieveChunks` — Retrieves relevant chunks from a RAG integration based on a query
   Schema: .agent/system-functions/Rag/retrieveChunks.json
 - `Rag.generateAnswer` — Generates an answer using a RAG integration based on a query
@@ -117,6 +93,16 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/Reactions/sendLocation.json
 - `Reactions.sendRawRequest` — Sends a raw request as a response for advanced use cases
   Schema: .agent/system-functions/Reactions/sendRawRequest.json
+- `Telegram.sendVoice` — Sends a voice message to a Telegram chat
+  Schema: .agent/system-functions/Telegram/sendVoice.json
+- `Telegram.sendText` — Sends a text message to a Telegram chat
+  Schema: .agent/system-functions/Telegram/sendText.json
+- `Telegram.sendAudio` — Sends an audio file to a Telegram chat
+  Schema: .agent/system-functions/Telegram/sendAudio.json
+- `Telegram.sendImage` — Sends an image by URL to a Telegram chat
+  Schema: .agent/system-functions/Telegram/sendImage.json
+- `Telegram.sendButtons` — Sends a message with inline keyboard buttons to a Telegram chat
+  Schema: .agent/system-functions/Telegram/sendButtons.json
 - `SessionDb.get` — Finds a single document by documentKey
   Schema: .agent/system-functions/SessionDb/get.json
 - `SessionDb.findByFilters` — Finds documents with filtering and pagination options
@@ -131,18 +117,32 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/SessionDb/deleteByFilters.json
 - `SessionDb.updateByFilters` — Updates documents matching the filter
   Schema: .agent/system-functions/SessionDb/updateByFilters.json
-- `Telegram.sendText` — Sends a text message to a Telegram chat
-  Schema: .agent/system-functions/Telegram/sendText.json
-- `Telegram.sendImage` — Sends an image by URL to a Telegram chat
-  Schema: .agent/system-functions/Telegram/sendImage.json
-- `Telegram.sendAudio` — Sends an audio file to a Telegram chat
-  Schema: .agent/system-functions/Telegram/sendAudio.json
-- `Telegram.sendVoice` — Sends a voice message to a Telegram chat
-  Schema: .agent/system-functions/Telegram/sendVoice.json
-- `Telegram.sendButtons` — Sends a message with inline keyboard buttons to a Telegram chat
-  Schema: .agent/system-functions/Telegram/sendButtons.json
+- `Asr.recognize` — Recognizes audio content using the specified ASR integration
+  Schema: .agent/system-functions/Asr/recognize.json
 - `Tts.synthesize` — Converts text to speech using the specified TTS integration and returns an audio URL
   Schema: .agent/system-functions/Tts/synthesize.json
+- `ProjectRouter.callProject` — Calls external project by chat api token and optional custom data
+  Schema: .agent/system-functions/ProjectRouter/callProject.json
+- `ProjectRouter.switchTo` — Switches the conversation context to another project.
+  Schema: .agent/system-functions/ProjectRouter/switchTo.json
+- `ProjectRouter.backToOriginalProject` — Returns the conversation context back to the original project
+  Schema: .agent/system-functions/ProjectRouter/backToOriginalProject.json
+- `ProjectRouter.getCustomData` — Gets the custom data that was passed during the last context switch to this bot
+  Schema: .agent/system-functions/ProjectRouter/getCustomData.json
+- `AgentContext.addNote` — Adds a text fragment to the context. Empty strings are ignored.
+  Schema: .agent/system-functions/AgentContext/addNote.json
+- `AgentContext.getNotes` — Returns concatenated text (by time of addition)
+  Schema: .agent/system-functions/AgentContext/getNotes.json
+- `AgentContext.deleteNotes` — Deletes all stored text notes
+  Schema: .agent/system-functions/AgentContext/deleteNotes.json
+- `AgentContext.putValue` — Stores a key-value pair in the context. Used to store objects different from text.
+  Schema: .agent/system-functions/AgentContext/putValue.json
+- `AgentContext.getValue` — Retrieves a previously stored value
+  Schema: .agent/system-functions/AgentContext/getValue.json
+- `AgentContext.deleteValue` — Deletes a previously stored value
+  Schema: .agent/system-functions/AgentContext/deleteValue.json
+- `AgentContext.clearContext` — Clears the entire context (both text and KV)
+  Schema: .agent/system-functions/AgentContext/clearContext.json
 - `Dialer.getCaller` — Returns the phone number of the client. Returns null if rawRequest is not available
   Schema: .agent/system-functions/Dialer/getCaller.json
 - `Dialer.hangUp` — Terminates the current call. On telephony channels sends a hangup reply, on other channels sends an optional text message
@@ -179,4 +179,22 @@ For detailed info about parameters and response, read the corresponding file.
   Schema: .agent/system-functions/Log/warn.json
 - `Log.error` — Logs an error message
   Schema: .agent/system-functions/Log/error.json
+
+## MCP Functions
+
+- `TestMCP.web_search_exa` — Search the web for any topic and get clean, ready-to-use content.
+
+      Best for: Finding current information, news, facts, people, companies, or answering questions about any topic.
+      Returns: Clean text content from top search results.
+
+      Query tips:
+      describe the ideal page, not keywords. "blog post comparing React and Vue performance" not "React vs Vue".
+      Use category:people / category:company to search through Linkedin profiles / companies respectively.
+      If highlights are insufficient, follow up with web_fetch_exa on the best URLs.
+  Schema: .agent/mcp-functions/TestMCP/web_search_exa.json
+- `TestMCP.web_fetch_exa` — Read a webpage's full content as clean markdown. Use after web_search_exa when highlights are insufficient or to read any URL.
+
+Best for: Extracting full content from known URLs. Batch multiple URLs in one call.
+Returns: Clean text content and metadata from the page(s).
+  Schema: .agent/mcp-functions/TestMCP/web_fetch_exa.json
 
