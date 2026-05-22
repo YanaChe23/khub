@@ -1,7 +1,0 @@
----
-key: 1000210800-open_ai_gpt41-kkn
-credential-key: 1000210800-yv-ihz
-name: OPEN_AI - gpt-4.1
-provider: OPEN_AI
-model: gpt-4.1
-is-direct-access: true
