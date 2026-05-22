@@ -1,9 +1,0 @@
----
-id: trigger_message_qomgz
-name: Сообщение
-position:
-  x: 416
-  y: 153
-next-step: function_rag_generateanswer_eazll
-parameters:
-  placeholder: null
