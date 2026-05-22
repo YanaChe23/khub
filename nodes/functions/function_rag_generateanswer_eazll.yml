@@ -3,7 +3,7 @@ id: function_rag_generateanswer_eazll
 name: Rag.generateAnswer
 position:
   x: 752
-  y: 116
+  y: 29
 next-step: function_reactions_sendtext_nymbq
 parameters:
   type: SYSTEM
