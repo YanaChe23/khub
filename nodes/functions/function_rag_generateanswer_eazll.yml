@@ -13,7 +13,7 @@ parameters:
   parameters:
     ragIntegration:
       type: INTEGRATION_RAG
-      value: null
+      value: 1000210800-sdq-oeh
       filled-ai: false
     query:
       type: STRING
