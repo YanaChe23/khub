@@ -1,0 +1,9 @@
+---
+id: trigger_message_sswch
+name: Сообщение
+position:
+  x: 525
+  y: 158
+next-step: null
+parameters:
+  placeholder: null
